@@ -21,11 +21,21 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PaginationManager : NSObject
 
 @property (nonatomic , weak) id<PaginationManagerDelegate> delegate;
+
 @property (nonatomic, retain) UIColor *refreshColor;
 @property (nonatomic, retain) UIColor *loaderColor;
+
 @property (nonatomic , assign) BOOL isStopLeft;
 @property (nonatomic , assign) BOOL isStopRight;
 @property (nonatomic , assign) BOOL isStopBottom;
+
+@property (nonatomic) CGFloat leftRefreshControlWidth;
+@property (nonatomic) CGFloat righttRefreshControlWidth;
+@property (nonatomic) CGFloat bottomRefreshControlHeight;
+
+@property (nonatomic) CGFloat bottomRefreshControlOffset;
+@property (nonatomic) CGFloat rightRefreshControlOffset;
+@property (nonatomic) CGFloat leftRefreshControlOffset;
 
 - (instancetype)init:(UIScrollView *)scrollview;
 - (void) initialLoad;
